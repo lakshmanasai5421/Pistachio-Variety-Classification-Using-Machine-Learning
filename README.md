@@ -50,13 +50,31 @@ Manual classification of pistachio types is time-consuming and error-prone. Auto
 * **Strengths:** Effective in high-dimensional space, works well with clear margins.
 * **Performance:** Achieved around 83% train and 85–87% test accuracy.
 
-#### 4. **Random Forest (RF)**
+#### 4. **Decision Tree**
+
+* **Purpose:** A simple tree-based model for classification.
+* **Strengths:** Easy to interpret, fast, handles both numerical and categorical data.
+* **Performance:** Good accuracy but prone to overfitting.
+
+#### 5. **Random Forest (RF)**
 
 * **Purpose:** Ensemble method based on decision trees.
 * **Strengths:** Handles overfitting well, robust to outliers.
 * **Performance:** 88% train accuracy, 89% test accuracy, 92% ROC-AUC.
 
-#### 5. **AdaBoost (Adaptive Boosting)**
+#### 6. **Gradient Boosting**
+
+* **Purpose:** Builds models sequentially to minimize error.
+* **Strengths:** High accuracy, handles complex data patterns well.
+* **Performance:** Very good performance, close to AdaBoost.
+
+#### 7. **XGBoost**
+
+* **Purpose:** Optimized implementation of gradient boosting.
+* **Strengths:** Regularization, speed, and scalability.
+* **Performance:** Competitive results, among the top-performing models.
+
+#### 8. **AdaBoost (Adaptive Boosting)**
 
 * **Purpose:** Combines multiple weak learners into a strong classifier.
 * **Strengths:** Focuses on hard-to-classify examples, improves accuracy iteratively.
@@ -78,10 +96,13 @@ Manual classification of pistachio types is time-consuming and error-prone. Auto
 | Model               | Train Accuracy | Test Accuracy | ROC-AUC   |
 | ------------------- | -------------- | ------------- | --------- |
 | Logistic Regression | 86%            | 88%           | 94%       |
-| KNN                 | 80%            | \~85%         | --        |
-| SVM                 | 83%            | 85–87%        | --        |
-| Random Forest       | 88%            | 89%           | 92%       |
-| **AdaBoost**        | ✅ 90%+         | ✅ Highest     | ✅ Highest |
+| KNN                 | 80%            | \~85%         | 83%        |
+| SVM                 | 84%            | 85–87%        | 94%       |
+| Decision Tree       | 85%            | 86%           | 90%      |
+| Random Forest       | 91%            | 89%           | 92%       |
+| Gradient Boosting   | 89%            | 88%           | 93%       |
+| XGBoost             | 92%            | 88%           | 94%       |
+| **AdaBoost**        | 89%+        | 89%           | 94%       |
 
 > ✅ **AdaBoost** was selected for deployment due to its superior generalization and stability.
 
@@ -101,11 +122,7 @@ Manual classification of pistachio types is time-consuming and error-prone. Auto
 * Final model saved as `model.pkl`
 * Flask web application built to allow users to input pistachio measurements and receive predictions.
 
-### 📷 Web Application Screenshot
 
-![Pistachio Classifier App](./assets/pistachio_app_ui.png)
-
----
 ### 📂 Project Structure
 
 ```
