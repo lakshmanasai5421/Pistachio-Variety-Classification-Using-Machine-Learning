@@ -14,7 +14,7 @@ Manual classification of pistachio types is time-consuming and error-prone. Auto
 
 ### 📊 Dataset
 
-* **Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/)
+
 * **Features Used:**
 
   * AREA
