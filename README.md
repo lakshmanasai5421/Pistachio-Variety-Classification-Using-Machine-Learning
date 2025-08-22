@@ -1,4 +1,4 @@
-## 📘 Project Title: Pistachio Variety Classification Using Machine Learning
+## Pistachio Variety Classification Using Machine Learning
 
 ### 📌 Overview
 
